@@ -1,0 +1,18 @@
+{
+  "name": "society-setu-backend",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/server.ts",
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "migrate": "node --env-file-if-exists=.env src/db/migrate.ts",
+    "provision": "node --env-file-if-exists=.env src/db/provision.ts",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  }
+}
